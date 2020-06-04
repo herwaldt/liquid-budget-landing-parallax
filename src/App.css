@@ -1,43 +1,86 @@
 .app {
   position: relative;
+  display: flex;
+  width: 100vw;
 }
 
-.container {
+.first-page {
   display: flex;
+  width: 100vw;
   flex-direction: row;
   min-height: 100vh;
   margin: auto;
   background-color: #C0ECFF;
 }
 
-.left-side {
-  min-width: 50%;
+.second-page {
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: row-start;
+}
+
+.third-page {
+  display: flex;
+  background: linear-gradient(180deg, rgba(0,170,229,1) 0%, rgba(0,140,189,0.92) 45%, rgba(0,98,132,1) 100%);
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  padding-left: 5vw;
+}
+
+.landing-text {
+  width: 40vw;
   padding-top: 30vh;
   padding-left: 50px;
 }
 
+.try-button {
+  width: 350px;
+  min-height: 50px;
+}
+
 .waterdrop {
-  width: 35%;
-  padding-top: 40vh;
-  padding-left: 250px;
-  z-index: -1;
+  height: 300px;
+  padding-top: 10vh;
+  padding-left: 30vw;
+  z-index: 2;
 }
 
-.red-section {
-  min-height: 100vh;
-  padding-left: 30px;
+.parallax-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.blue-section {
-  background: linear-gradient(180deg, rgba(0,170,229,1) 0%, rgba(0,140,189,0.92) 45%, rgba(0,98,132,1) 100%);
-  min-height: 80vh;
-  margin: 0px;
-  padding: 0px;
-  z-index: 10;
+.small-drop,
+.cloud {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.small-drop {
+  width: 100px;
+  height: 150px;
+  background-image: url('./components/images/waterdrop.png');
+  z-index: 1;
+}
+
+.cloud {
+  width: 800px;
+  height: 400px;
+  background-image: url('./components/images/cloud.png');
+  z-index: 5;
 }
 
 .paragraphs {
   opacity: 0.7;
+  margin-right: 10px;
+  z-index: 5;
 }
 
 .waves {
@@ -49,14 +92,23 @@
   overflow: hidden;
 }
 
+.costCards {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
 .card {
   width: 18%;
-  height: 55vh;
+  min-width: 300px;
   margin: 20px;
+  height: 500px;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: flex;
+  z-index: 5;
 }
 
 .special {
@@ -64,17 +116,97 @@
   color: rgba(0,170,229);
 }
 
-.costCards {
-
+.price-list {
+  height: 150px;
+  margin-top: 20px;
 }
 
-.list {
-  margin-top: 20px;
+.price-button {
+  padding-top: 10px;
 }
 
 h2 {
   font-size: 48px;
   color: white;
   padding-top: 100px;
+}
+
+.floating-box {
+  width: 100px;
+  height: 300px;
+  background: black;
+  margin: 5px;
+  will-change: transform;
+}
+
+.bottom-grid {
+  display: flex;
+  padding-top: 5vh;
+}
+
+.logo {
+  margin: 5px;
+  will-change: transform;
+  width: auto;
+  height: 100px;
+  border-radius: 15px;
+  box-shadow: 0px 110px 60px -20px rgba(0, 0, 0, 0.4);
+}
+
+.logo:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 700px) {
+  .try-button {
+    width: 250px;
+    min-height: 10px;
+  }
+
+  .landing-text {
+    width: 40vw;
+    padding-top: 50vh;
+    padding-left: 10px;
+  }
+
+  .waterdrop {
+    height: 200px;
+    padding-top: 20vh;
+  }
+
+  .small-drop {
+    width: 50px;
+    height: 75px;
+  }
+
+  .cloud {
+    width: 800px;
+    height: 400px;
+  }
+
+  .costCards {
+    padding-top: 10vh;
+  }
+
+  .card {
+    width: 80vw;
+    min-width: 300px;
+    height: 400px;
+  }
+
+  .second-page {
+    min-height: 80vh;
+    flex-direction: center;
+  }
+
+  .third-page {
+    margin-right: 10px;
+    min-height: 200vh;
+    background: linear-gradient(180deg, rgba(0,170,229,1.92) 0%, rgba(0,140,189,0.8) 45%, rgba(0,98,132,1) 100%);
+  }
+
+  .logo {
+    padding-top: 30px;
+  }
 
 }

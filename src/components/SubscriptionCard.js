@@ -7,16 +7,23 @@ function SubscriptionCard({title, amount, timeline, offer1, offer2, offer3, spec
     <>
       <Card className='card' elevation={10}>
         <CardContent>
-          <Typography variant="h6">{title}</Typography>
-          <Typography variant="h3">{amount}</Typography>
-          <Typography variant="subtitle1">{timeline}</Typography>
-          <Grid className='list' direction="column" container>
-            <Typography variant="h6" className="special">{special}</Typography>
-            <Typography variant="caption">{offer1}</Typography>
-            <Typography variant="caption">{offer2}</Typography>
-            <Typography variant="caption">{offer3}</Typography>
-            <Button variant="contained" color="secondary">GET STARTED</Button>
-          </Grid>
+          <div  className='grid-card'>
+            <div className='price-title'>
+              <Typography variant="h6">{title}</Typography>
+              <Typography variant="h3">{amount}</Typography>
+              <Typography variant="subtitle1">{timeline}</Typography>
+            </div>
+            <Grid container className='price-list' direction="column" justify="center" alignItems="center">
+              <Typography variant="h6" className="special">{special}</Typography>
+              <Typography variant="body2">{offer1}</Typography>
+              <Typography variant="body2">{offer2}</Typography>
+              <Typography variant="body2">{offer3}</Typography>
+            </Grid>
+            <div className='price-button'>
+              <Button variant="contained" color="secondary">GET STARTED</Button>
+            </div>
+          </div>
+          
         </CardContent>
       </Card>
     </>
