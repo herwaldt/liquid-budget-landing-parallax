@@ -1,5 +1,7 @@
 # Landing Page for Liquid Budget
 
+# [Open Project Here](https://liquid-budget.web.app/)
+
 ## Paralax and Motion Effects
 
 ### `Move your mouse on the page to see all the physics based effects`
