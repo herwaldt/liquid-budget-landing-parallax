@@ -4,8 +4,6 @@
 
 ## Paralax and Motion Effects
 
-![](parallaxGif.gif)
-
 ### `Move your mouse on the page to see all the physics based effects`
 
 This is meant to be the landing page for the mobile app [Liquid Budget](https://github.com/herwaldt/mobile-budget).
